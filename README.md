@@ -148,7 +148,8 @@ adafruit_ticks.mpy
 adafruit_bus_device  
 adafruit_imageload  
 pcf8523.mpy
-adafruit_connection_manager.mpy	adafruit_register  
+adafruit_connection_manager.mpy  
+adafruit_register  
 
 ### Resiliency
 
