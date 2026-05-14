@@ -1,0 +1,458 @@
+!XAV eht edisni deppart m'I  !pleH
+"It'll be there on Monday, I promise"
+$ fortune
+$ rm -r $HOME
+'Has eighteen letters' does.
+90% of everything is crud.
+: is not an identifier 
+A Smith and Wesson beats four aces.
+A closed mouth gathers no foot.
+A company is known by the men it keeps.
+A dead man cannot bite.
+A fool and his honey are soon parted.
+A girl's best friend is her mutter.
+A good memory does not equal pale ink.
+A king's castle is his home.
+A lie in time saves nine.
+A light wife doth make a heavy husband.
+A man with 3 buttocks.
+A man's house is his castle.
+A man, a plan, a canal.  Suez!
+A moose once bit my sister.
+A penny saved is ridiculous.
+A rolling stone gathers no moss.
+A shared blanket weaves a bond of warmth.
+A snake lurks in the grass.
+A stitch in time saves nine.
+A violent man will die a violent death.
+A well-known friend is a treasure.
+A word to the wise is enough.
+Absence makes the heart grow fonder.
+Abstain from beans today.
+Abstention makes the heart grow fonder.
+Advancement in position soon.
+Ahah!
+AIs prove you can be smart without a brain.
+Alas, how love can trifle with itself!
+Aleph sub alpha is the alpha'th aleph.
+All art is but imitation of nature.
+All art is quite useless.
+All hope abandon, ye who enter here.
+All is well that ends well.
+All machines are amplifiers.
+All trends towards Chaos.
+All true wisdom is found on T-shirts.
+Always cut the cards.
+Angels are near.
+Any excuse will serve a tyrant.
+Any shrine is better than self-worship.
+Anything is possible, unless it's not.
+Appearances often are deceiving.
+Badness comes in waves.
+Be alert, the world needs more lerts.
+Be cautious in your daily affairs.
+Be cheerful while you are alive.
+Two to beam up, Scotty!
+Because the wine remembers.
+Bedfellows make strange politicians.
+Beggars should be no choosers.
+Being natural is simply a pose.
+Better late than never.
+Beware of Bigfoot!
+Beware of Geeks bearing grifts.
+Beware of geeks bearing graft.
+Beware of low flying butterflies.
+Beware the thirty-first of November.
+But I don't like Spam!
+But you shall not escape my iambics.
+Buy low, sell high.
+Celibacy is not hereditary.
+Charity begins at home.
+Chicken Little was right.
+Coffee in England is just toasted milk.
+Convention is the ruler of all.
+Courage is your greatest present need.
+Cure the disease and kill the patient.
+Cwm fjord-bank glyphs vext quiz.
+Decisions terminate panic.
+Direct action produces direct reaction.
+Disk crisis, please clean up!
+Do not loan money to a fiend.
+Do you have lysdexia?
+Does the name Pavlov ring a bell?
+Doing gets it done.
+Don't eat yellow snow.
+Don't feed the bats tonight.
+Don't force it; use a hammer.
+Don't read everything you believe.
+Don't vote--it only encourages them!
+Down with ignurance!
+Draw your salary before spending it.
+Drive defensively, buy a tank.
+Drop that pickle!
+Duck who fly upside down have quack up.
+Duty is what one expects from others.
+E Pluribus Unix.
+Each of us bears his own Hell.
+Economy makes men independent.
+Eloquence is logic on fire.
+Eschew obfuscation.
+Even a cabbage may look at a king.
+Even a hawk is an eagle among crows.
+Ever shoot an elephant in your pajamas?
+Every cloud engenders not a storm.
+Every solution breeds new problems.
+Every why hath a wherefore.
+Everything goes wrong at once.
+Everything you know is wrong.
+Everything's coming up roses.
+Excreto ergo sum.
+Exercise caution in your daily affairs.
+Extreme fear can neither fight nor fly.
+Fain would I climb, yet fear I to fall.
+Familiarity breeds attempt.
+Flee at once, all is discovered.
+Floppy now, hard later.
+For courage mounteth with occasion.
+Free the Indianapolis 500.
+Give him an evasive answer.
+Give up.
+Given my druthers, I'd druther not.
+Go away.
+Happy feast of the pig.
+Harp not on that string.
+Haste maketh waste.
+Have no friends not equal to yourself.
+Have you asked your AI today?
+Having nothing, nothing can he lose.
+He who hesitates is sometimes saved.
+He who laughs, lasts.
+He who slings mud loses ground.
+Hell's broken loose.
+Help!  I'm trapped inside the VAX!
+History is bunk.
+Honesty's the best policy.
+Honi soit la vache qui rit.
+Hope is a waking dream.
+How apt the poor are to be proud.
+How come we never talk anymore?
+How you look depends on where you go.
+I am looking for an honest man.
+I am not a crook.
+I can relate to that.
+I do desire we may be better strangers.
+I don't get no respect.
+I don't understand you anymore.
+I dote on his very absence.
+I feel the need... the need for speed!
+I like it better in the dark.
+I love treason but hate a traitor.
+I never did it that way before.
+I think we're in trouble.
+I think, therefore I am paid.
+I think, therefore I am.  I think.
+I will make you shorter by the head.
+I will never lie to you.
+I will not forget you.
+I'd just as soon kiss a Wookiee.
+I'll burn my books.
+I'll never get off this planet.
+I'll turn over a new leaf.
+I've been there.
+I've got a very bad feeling about this.
+Idleness is leisure gone to seed.
+Idleness is the holiday of fools.
+If anything can go wrong, it will.
+If in doubt, make it sound convincing.
+If it happens, it must be possible.
+If it isn't broken, don't fix it.
+If no one uses it, there's a reason.
+If there is no wind, row.
+If you suspect a man, don't employ him.
+If your bread is stale, make toast.
+Ignore previous fortune.
+In charity there is no excess.
+In my end is my beginning.
+In order to be, never try to seem.
+Information is the inverse of entropy.
+It could be worse--it might be raining.
+It is always the partner's fault.
+It is bad luck to be superstitious.
+It is later than you think.
+It works better if you plug it in.
+It's clever, but is it art?
+Jimmy Hoffa--please call home.
+Just to have it is enough.
+Kisses are a better fate than wisdom.
+Kix are for trids.
+Klaatu barada nikto.
+Knowledge is power.
+Laugh when you can; cry when you must.
+Law stands mute in the midst of arms.
+Lead on, MacDuff!
+Leave no stone unturned.
+Let me take you a buttonhole lower.
+Life is one long struggle in the dark.
+Live in the past and future only.
+Lonely is a man without love.
+Look ere ye leap.
+Lord, what fools these mortals be!
+Love is sentimental measles.
+Love thy neighbor.  Tune thy piano.
+Make a wish, it might come true.
+Man and wife make one fool.
+Man is by nature a political animal.
+Many a family tree needs trimming.
+Many are cold, but few are frozen.
+Many hands make light work.
+Many pages make a crowded castle.
+Many receive advice, few profit by it.
+Mary had a little.
+Matrimony is the root of all evil.
+May you live in interesting times.
+Meditation is not what you think.
+Misfortune, try again later.
+Fortune machine empty, try again later.
+Moderation in all things.
+Money is the root of all wealth.
+Mum's the word.
+Mumble.
+Murphy was an optimist.
+Must I hold a candle to my shames?
+My Karma ran over my dogma.
+My cup hath runneth'd over with love.
+My dog has no nose.
+Nanu nanu!
+Nature abhors a vacuous experimenter.
+Necessity has no law.
+Necessity is the mother of invention.
+Neestiko arkoudi dhen horevee.
+Never eat at a place called Mom's.
+Never give a gun to ducks.
+Never play cards with a man called Doc.
+Never play leapfrog with a unicorn.
+Never replace a successful experiment.
+Never throw a bird at a dragon.
+Never underestimate a woman.
+Nihilism doesn't exist.
+No experiment is reproducible.
+No matter where you go, there you are.
+No one becomes depraved in a moment.
+No one expects the Spanish Inquisition!
+Nostalgia ain't what it used to be.
+Not all who own a harp are harpers.
+Nothing endures but change.
+Nothing ever goes away.
+Nothing is as easy as it looks.
+Nothing is but what is not.
+Nothing succeeds like excess.
+Nothing will ever happen to you.
+Oh, Nicky, you're such a tool.
+Old age is the harbor of all ills.
+Old soldiers never die.  Young ones do.
+On a clear disk you can seek forever.
+One Bell System--it sometimes works.
+One good turn deserves another.
+One good turn gets the whole blanket.
+Only a fool has no doubts.
+Only fools are quoted.
+Oregonians don't tan, they rust.
+PURGE COMPLETE, ALL FILES DELETED.
+Palindrome isn't one.
+Parsley is gharsley.
+Patch griefs with proverbs.
+Practice yourself what you preach.
+Praise the sea; on shore remain.
+Preserve the old, but know the new.
+Pronounce your prepositions, damn it!
+Prototype designs always work.
+Pssst.  The root password is 'kumquat'.
+Put people on hold when possible.
+Put your trust in those who are worthy.
+Rank has its privileges.
+Reality--what a concept!
+Remember the Alamo!
+Resist everything but temptation.
+Retribution will be yours.
+Riches cover a multitude of woes.
+Rome was not built in one day.
+Safety is better than the wrong answer.
+Satire is what closes in New Haven.
+Save gas, don't eat beans.
+Save the alligators--eat a preppy.
+Say the secret word and you win $100.
+Sell short.
+Set the cart before the horse.
+She sells cshs by the cshore.
+She who hesitates is won.
+Shine on, you crazy diamond!
+Short circuits got no reason to live.
+Sight is a faculty; seeing is an art.
+Small things make base men proud.
+Smile!  You're on Candid Camera.
+Smile, tomorrow will be worse.
+Snow day--stay home.
+Sorry, no fortune this time, try again.
+Stay away from flying saucers today.
+Strike while the iron is hot.
+Such evil deeds could religion prompt.
+Swap read error - You lose your mind.
+System restarting, wait...
+Talkers are not good doers.
+Tanstaafl.
+Tempt not a desperate man.
+That that is is not that that is not.
+The Bozos are coming.
+The basis of optimism is sheer terror.
+The better part of valor is discretion.
+The bigger the theory, the better.
+The early worm gets the bird.
+The future lies ahead.
+The greatest remedy for anger is delay.
+The heart is wiser than the intellect.
+The man who runs may fight again.
+The moon is made of green cheese.
+The more the merrier.
+The next six days are dangerous.
+The only thing constant is change.
+The other line moves faster.
+The pen is mightier than the pencil.
+The plural of spouse is spice.
+The ripest fruit falls first.
+The road to Hades is easy to travel.
+The star of riches is shining upon you.
+The time is right to make new friends.
+The weed of crime bears bitter fruit.
+The world wants to be deceived.
+There is a bear following you around.
+There is always an easier way to do it.
+There is always one more bug.
+There is an exception to all laws.
+There is much Obi-Wan did not tell you.
+There is news.
+There is no fool to the old fool.
+There is no royal road to geometry.
+There's small choice in rotten apples.
+Things are not always what they seem.
+Things work better when plugged in.
+Eat more cabbage.
+This fortune will not come true.
+This sentance has threee errors.
+This sentence no verb.
+This unit ... must ... survive.
+This was the most unkindest cut of all.
+Thou hast seen nothing yet.
+To add insult to injury.
+To all virgins: thanks for nothing.
+To do nothing is to be nothing.
+To have died once is enough.
+To love is good, love being difficult.
+To the landlord belong the doorknobs.
+Today is a bad day to give to charity.
+Two heads are better than one.
+Under every stone lurks a politician.
+Unix soit qui mal y pense.
+Up your accumulator.
+Vini, vidi, vici.
+Visit beautiful Vergas, Minnesota.
+Visit beautiful Wisconsin Dells.
+Vote Anarchist!
+Walk softly and carry a big stick.
+Wake up and smile!
+Waste not fresh tears over old griefs.
+Watch out for low flying seagulls.
+We are not alone.
+We have to get organized!
+We read to say that we have read.
+Welcome to The Machine.
+Well begun is half done.
+Wharbat darbid yarbou sarbay?
+What a friend we have in cheeses.
+What fools these mortals be.
+What soon grows old?  Gratitude.
+What's all this brouhaha?
+When in doubt, follow your heart.
+When in doubt, lead trump.
+When in doubt, take all the defaults.
+When it rains, it pours.
+When the sun shineth, make hay.
+When you're in command, command.
+Where there's a whip there's a way.
+While there's life, there's hope.
+Whoops, stepped on a frog.
+Why are there no blue M&M's?
+Why does love have to be so sad?
+Wine turns a man inside outwards.
+Wisdom is knowing what to do next.
+Without fools there would be no wisdom.
+Women should be obscene and not heard.
+Words are the voice of the heart.
+Words have a longer life than deeds.
+Words must be weighed, not counted.
+Yabba dabba doo!
+You are always busy.
+You are fair-minded, just and loving.
+You are lustworthy.
+You are magnetic in your bearing.
+You are standing on my toes.
+You are taking yourself too seriously.
+You auto buy now.
+You can be replaced by this computer.
+You can't cheat the phone company.
+You can't even cut the cheese.
+You can't get there from here.
+You cannot see the wood for the trees.
+You don't give a damn about apathy.
+You don't have mail.
+You enjoy the company of other people.
+You get what you pay for.
+You hate mail.
+You have a truly strong individuality.
+You have mail.
+You have no real enemies.
+You haven't a single redeeming vice.
+You humans are all alike.
+You love peace.
+You may already be a wiener!
+You may now log in to life.  Password:
+You might have mail.
+You need not worry about your future.
+You now have Asian Flu.
+You roll my log, and I will roll yours.
+You should hardly ever equivocate.
+You tread upon my patience.
+You will be awarded some great honor.
+You will be divorced within a year.
+You will be misunderstood by everyone.
+You will be run over by a beer truck.
+You will be squirrely today.
+You will be successful in love.
+You will be surrounded by luxury.
+You will contract a rare disease.
+You will die of terminal acne.
+You will forget that you ever knew me.
+You will get what you deserve.
+You will have a long and boring life.
+You will have a long and healthy life.
+You will inherit millions of dollars.
+You will lose an important file.
+You will never know hunger.
+You will outgrow your usefulness.
+You will soon forget this.
+You will survive the conflagration.
+You will triumph over your enemy.
+You will wish you hadn't.
+You'll be sorry.
+You're at Witt's End.
+You've got this.
+Your aim is high and to the right.
+Your domestic life may be harmonious.
+Your enemies are closing in.
+Your love life will be interesting.
+Your present plans will be successful.
+Your step will soil many countries.
+cookie: cannot open /lib/games/cookie
+cookie: not found
+f u cn rd ths, itn tyg h myxbl cd.
+Easy come, easy go.
+-- Last cookie in file -- 

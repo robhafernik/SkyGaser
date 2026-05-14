@@ -1,0 +1,156 @@
+
+# SkyGaser
+
+## Weather, sky conditions and data Display
+
+This project is a continuation of an earlier project, listed in my Github repository as "Dakota".  This
+is similar, but the code is much improved and the data display presented is densor, but easier to read.
+
+
+Uses Titano PyPortal hardware from Adafruit, http://www.adafruit.com,
+along with an Adafruit BME280 I2C or SPI Temperature Humidity Pressure Sensor and
+a Adafruit PCF8523 Real Time Clock Breakout Board.
+
+**Written: 2026 by Rob**, rob@hafernik.com
+
+This project is a real-time display of date, time, weather and sky conditions (see photo)
+
+## Why?
+
+So why work on a device that does nothing that a smart phone won't do?  Fair question.  Short hacker answer: 
+because I can. There are other reasons, however. A person doesn't always have their phone on hand.  
+The target location for this device is the bathroom of our house, where we've had one version or another 
+of this device for several years and found it to be very helpful.  When you get up in the morning or middle of the night, you don't have 
+our phone in your hand.  It's also a gentile nightlight.  In addition, it was a good way to stretch my hardware and 
+programming skills.  I'vve never done any 3-D printing before, so this was a stretch.  Lastly, it's an excercise in 
+UI/UX design.  So, plenty of *why*.
+
+## UI/UX
+
+Long experience with similar devices have informed the design of this one.  There are a few requirements:
+
+- Time and temperature must be readable across the room (and from the shower) and distinct from each other
+- Relative humidity and outside conditions should be clear and eaay to read
+- UV index, moon phases, Air Quality Index, etc should be presented as easy to read graphics.
+- Day of the week and month should be apparent.
+- Inside conditions should include temperature, humidity and pressure.
+- Weather alerts should show up prominenently.
+- All data should be color coded such that general status (good, medium, bad) can be read at a distance.
+
+These requirements led to the display you see in the project photos.
+
+The Titano PyPortal has a Neopixel LED on the back.  Since this project has an enclosure, I wasn't
+sure how to use it.  However, it turned out that the case is pretty reflective and the glow of the 
+LED leaks around to the front.  To use this, I set the LED to yellow for a situation where Dakota 
+isn't connected to the internet and red if there is a weather alert (which also displays on the LCD).
+
+The backlight is set to the minimum I could set it to (lower values seem to turn it off altogether) when 
+the light sensor detects dim light.  When it's not dim, the backlight is set to a moderately high value.  
+This works better than I expected.
+
+## Hardware
+
+This project uses the **Titano** board from Adafruit.  
+
+https://www.adafruit.com/product/4444
+
+The Titano PyPortal uses an ATMEL (Microchip) ATSAMD51J20, and an 
+Espressif ESP32 Wi-Fi coprocessor with TLS/SSL support built-in. It has a 3.5" diagonal 320 x 480 
+color TFT with resistive touch screen (the touch interface is not used in this project).  It can be programmed
+in CircuitPython, Adafruit's embedded Python environment.
+
+Also in this project is a BME280 Temperature/Humidity/Pressure sensor and a PCF8523 Real Time Clock.  Both of these 
+are easily available from Adafruit, Digi and so on.
+
+Both the clock and sensor are I2C, meaning no soldering is required for this project.
+
+The case is 3D printed.  I started with the case by joeyC (thanks!) and modified it to have a place for the 
+temperature sensor.  Since you can't put the sensor in the case with the Titano (too much heat messes up the 
+readings), I added a little sidecar to hold the temperature sensor.  I'm a newbie at 3-D printing, though, so
+my mods are probably awkward.
+
+## Theory of Operation
+
+The code runs a loop every MAIN_SLEEP seconds (currently 10 seconds).  This means that the time displayed
+(which is only hours and minutes) may be off by as much as MAIN_SLEEP seconds, but that is deemed OK for 
+this particular application (it only shows hours and minutes anyway).
+
+A pattern is followed that is common with CircuitPython: a "secrets.py" file is installed in the 
+file system of the device.  This file is imported by the main file to get "secrets", such as the
+WiFi password and other configuration.  A dummy of this file with no secrets is saved in the code
+directory. This keeps the secrets from getting checked in to GitHub.   The real secrets file lives
+only in the file system of the device.
+
+All of the data collected from APIs and sensors is stored in a single Dictionary (also known as an associative array) called
+**Data**.  Updating each type of data updates the map.  When it's time to draw the display, the
+Data dictionary supplies all of the information.  This means that the APIs or sensors can be
+swapped out withut major change to the code.  As long as they update the dictionary with the
+same data, the display of the data is unchanged.  Conversely, changes to the design of 
+the UI will not change the way that data is collected.  It's probably not "pythonic" to 
+do it this way, but I'm old and set in my ways and that means a clear dividing line between
+data and its display.
+
+The OpenWeatherMap API returns a Unix timestamp, as well as a timezone offset for the latitude and longitude
+provided in the API call.  These can be used to provide the hour and minutes shown on the screen.  In between
+calls to the API, an offset derrived from these is used to adjust the local device time to Unix time.  Once
+you know seconds since epoch, Python provides plenty of ways to get hour, minute, month, day of month and day of week.  
+Since the API is called every WEATHER_FREQ seconds, the time is pretty accurate (not as accurate as calling NTP, but 
+the device only displays hour and minute, so tight accuracy isn't required)
+
+A number of colors, such as "MODERATE" are used in the code.  I've found tha these are very subjective and YMMV.
+Also, a given set of colors may not display quite the same on another device, even of the same manufacture.  
+Obviously, if these don't look good to you, then use ones that do.  Also, I'm not a graphic designer, so my
+colors may not harmonize in ways that designers like.
+
+**Main Loop**
+
+Each source of data for the program is obtained on its own schedule.  For example, the weather API is
+called every WEATHER_FREQ seconds (currently 601, or about 10 minutes).  The code keeps a counter, called 
+Tick, which is the Python time.time() result, which returns the hardware clock's number of seconds
+since startup.  Each function keeps a counter and when the value of Tick exceeds the counter, it's 
+time to perform the function.  The interval for each function is a prime number, meaning that the 
+various function calls will very rarely line up and cause two functions to be performed in one loop.
+This is a totally unnecessary frill, but I like primes.
+
+Each time through the main loop, the code does the following:
+
+* See if the device is connected to the WiFi access point.  If not connected, try to connect. If connected:
+	- Get the weather, if it's time
+	- Get the Air Quality Index, if it's time
+* Get data from the SCD-30 sensor, if it's time
+* Work out the Local Time, based on the RTC
+* Show all of the data on the screen
+
+### OpenWeatherMap
+
+The program uses the OpenWeatherMap APIs for weather and air quality information:
+
+https://openweathermap.org
+
+This is a wonderfull resource for weather information.  This code uses a paid API (although the payment only 
+amounts to $2 or $3 per month), but it is perfectly possible to do similar things with completely free
+information.  The APIs are clear, easy to call and well documented.  I *have* found that UV Index and 
+Air Quality Index don't seem particularly meticulous, but I'm not a meteorologist, so what do I know?
+
+Visit their website and follow the instructions to get an API Token.  This is a string of text you wlll 
+need to add to your secrets.py file.
+
+### Resiliency
+
+I've tried to make the code resilient to the most common problems: power failures, temporary internet
+outages and so on.  These conditions are hard to test, however, and there is no doubt room for improvement.
+Also, I've tried to make the failure of one thing not pull down everything else.  If the call to the
+Air Quality API fails, for example, everything else will still get by with "--" shown for the
+Air Quality.  Again, this leads to many combinations which are hard to test and there are likely
+bugs to be fixed.
+
+### Case
+
+The case is a work in progress.  The current case seems to work, but the temerature isolation between the
+Titano to the temperature sensor is still not perfect.
+
+## License
+
+Released under MIT license, see license file in repository.
+
+
