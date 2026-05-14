@@ -64,11 +64,6 @@ are easily available from Adafruit, Digi and so on.
 
 Both the clock and sensor are I2C, meaning no soldering is required for this project.
 
-The case is 3D printed.  I started with the case by joeyC (thanks!) and modified it to have a place for the 
-temperature sensor.  Since you can't put the sensor in the case with the Titano (too much heat messes up the 
-readings), I added a little sidecar to hold the temperature sensor.  I'm a newbie at 3-D printing, though, so
-my mods are probably awkward.
-
 ## Theory of Operation
 
 The code runs a loop every MAIN_SLEEP seconds (currently 10 seconds).  This means that the time displayed
@@ -162,8 +157,11 @@ bugs to be fixed.
 
 ### Case
 
-The case is a work in progress.  The current case seems to work, but the temerature isolation between the
-Titano to the temperature sensor is still not perfect.
+The case is 3D printed, from the two files included in the project .  I started with the case by joeyC (thanks!) 
+and modified it to have a place for the temperature sensor.  Since you can't put the sensor in the case with the 
+Titano (too much heat messes up the readings), I added a little sidecar to hold the temperature sensor.  I'm a 
+newbie at 3-D printing, though, so my mods are probably awkward. The current case seems to work, but the temerature 
+isolation between the Titano to the temperature sensor is still not perfect.
 
 ## License
 
