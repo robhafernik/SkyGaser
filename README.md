@@ -140,7 +140,7 @@ need to add to your secrets.py file.
 This project's lib/ directory will need the following from the Adafruit library sources:
 
 adafruit_bitmap_font  
-adafruit_display_shapes  		
+adafruit_display_shapes  
 adafruit_requests.mpy  
 adafruit_bme280  
 adafruit_esp32spi  
