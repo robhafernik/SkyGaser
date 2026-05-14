@@ -139,16 +139,16 @@ need to add to your secrets.py file.
 
 This project's lib/ directory will need the following from the Adafruit library sources:
 
-adafruit_bitmap_font		
-adafruit_display_shapes		
-adafruit_requests.mpy
-adafruit_bme280			
-adafruit_esp32spi		
-adafruit_ticks.mpy
-adafruit_bus_device		
-adafruit_imageload		
+adafruit_bitmap_font  
+adafruit_display_shapes  		
+adafruit_requests.mpy  
+adafruit_bme280  
+adafruit_esp32spi  
+adafruit_ticks.mpy  
+adafruit_bus_device  
+adafruit_imageload  
 pcf8523.mpy
-adafruit_connection_manager.mpy	adafruit_register
+adafruit_connection_manager.mpy	adafruit_register  
 
 ### Resiliency
 
