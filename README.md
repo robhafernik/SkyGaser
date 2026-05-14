@@ -135,6 +135,21 @@ Air Quality Index don't seem particularly meticulous, but I'm not a meteorologis
 Visit their website and follow the instructions to get an API Token.  This is a string of text you wlll 
 need to add to your secrets.py file.
 
+### Libraries
+
+This project's lib/ directory will need the following from the Adafruit library sources:
+
+adafruit_bitmap_font		
+adafruit_display_shapes		
+adafruit_requests.mpy
+adafruit_bme280			
+adafruit_esp32spi		
+adafruit_ticks.mpy
+adafruit_bus_device		
+adafruit_imageload		
+pcf8523.mpy
+adafruit_connection_manager.mpy	adafruit_register
+
 ### Resiliency
 
 I've tried to make the code resilient to the most common problems: power failures, temporary internet
