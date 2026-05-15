@@ -85,12 +85,16 @@ the UI will not change the way that data is collected.  It's probably not "pytho
 do it this way, but I'm old and set in my ways and that means a clear dividing line between
 data and its display.
 
-The OpenWeatherMap API returns a Unix timestamp, as well as a timezone offset for the latitude and longitude
-provided in the API call.  These can be used to provide the hour and minutes shown on the screen.  In between
-calls to the API, an offset derrived from these is used to adjust the local device time to Unix time.  Once
-you know seconds since epoch, Python provides plenty of ways to get hour, minute, month, day of month and day of week.  
-Since the API is called every WEATHER_FREQ seconds, the time is pretty accurate (not as accurate as calling NTP, but 
-the device only displays hour and minute, so tight accuracy isn't required)
+I spent a ridiculous amount of time trying to get the time right.  You would think time is an easy thing, 
+but it is harder than it seems.  For one thing, the RTC does not do daylight savings time or time zones.
+Also, the internal clock of the Titano is laughably inaccurate.  It would be off by minutes per day, if
+you used it.  In the end, the only thing that seemed reliable was to keep the RTC tuned to UTC and then
+apply an offset based on time zone and daylight savings time for display.  The time zone is set in the
+secrets.py file, along with a flag indicating if daylight savings is in use in the locale where the 
+SkyGaser is deployed.  From these, the time is adjusted from UTC to local time.  Since some of the APIs 
+use Unix time (such as sunrise and sunset times), Unix time must be calculated from UTC, but this is
+fairly straightforward.  All of these calculations could be improved, as far as performance goes, using
+lookup tables and precalculated offsets, but the project is low on memory and this seems to fit OK.
 
 A number of colors, such as "MODERATE" are used in the code.  I've found tha these are very subjective and YMMV.
 Also, a given set of colors may not display quite the same on another device, even of the same manufacture.  
@@ -115,6 +119,48 @@ Each time through the main loop, the code does the following:
 * Get data from the SCD-30 sensor, if it's time
 * Work out the Local Time, based on the RTC
 * Show all of the data on the screen
+
+**Displayed Data**
+
+Here's what the SkyGaser displays:
+
+- Current conditions, temperature, humidity and sky conditions.
+- Today's forecast, straight from the API (which is sometimes worded funny, but what can you do?).  After
+5PM it changes to tomorrow's forecast.
+- Wind speed and direction, with North being up, of course.
+- UV danger, with color going from deep blue (no danger at all), to bright purple (wear protection)
+- Air quanlity, going from green (great) to bright yellow (very bad), with most important pollutant 
+(eg, "O3" for ozone) in the middle.
+- Moon phase (only showing the eight major phases, NOT an exact daily percentage).
+- Inside conditions, from sensor (temperature, humidity, pressure -- same as outside).
+- debug info (too dim to see easily).  Hours since reboot and free memory (see memory section).
+- Day, date and time.
+- Fortune cookie (stolen from old Unix box many years ago).  You can add or subtract your own by editing
+the cookies.txt file.  This changes every 30 minutes.
+
+**Memory and Circuit Python**
+
+CircuitPython is tricky when it comes to memory.  Yes, it does have dynamically allocated memory, but 
+NO, it does not have compaction.  *Memory can become fragmented.*  Since this projects involves calling APIs 
+that may return 10-15K bytes of results (the weather alerts API can be bad about this), it needs that 
+much contiguous memory.  It's important to kill off used memory as soon as possible to minimize fragmentation.
+*I wish someone would put memory compaction into CircuitPython.  It's slow, I know, and would be terrible 
+for a real-time system, but many projects, such as this one, would have no problem giving up a couple
+of seconds now and then to compact memory.  It could be a call-on-demand feature, rather than automatic.*
+
+**Networking**
+
+Networking is hard on any microcontroller and the Titano is no exception.  In general, I've found that
+long-running connections are not good and dropped connections to the WiFi network must be taken in stride. 
+It's best to close connections and dispose of memory as soon as possible.  It's also important to *update the 
+Titano to the newest firmware.  Adafruit has instructions for this and it certainly makes a difference.
+The older stack will cause the device to need a reboot every 12 hours or so, whereas the latest libraries 
+only require a reboot in some weeks' time.*
+
+See this page:  https://learn.adafruit.com/upgrading-esp32-firmware/upgrade-all-in-one-esp32-airlift-firmware
+
+It's also important to use the lastest version of CircuitPython and the latest version of the CircuitPython 
+libraries.  These can be downloaded from Adafruit and other sources.
 
 ### OpenWeatherMap
 
@@ -154,6 +200,9 @@ Also, I've tried to make the failure of one thing not pull down everything else.
 Air Quality API fails, for example, everything else will still get by with "--" shown for the
 Air Quality.  Again, this leads to many combinations which are hard to test and there are likely
 bugs to be fixed.
+
+The SkyGaser runs for more than a week without reboot, which is fine for this use case
+(the device is only out of service for 20-30 seconds on rreboot).
 
 ### Case
 
