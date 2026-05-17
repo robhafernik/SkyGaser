@@ -116,7 +116,7 @@ Each time through the main loop, the code does the following:
 * See if the device is connected to the WiFi access point.  If not connected, try to connect. If connected:
 	- Get the weather, if it's time
 	- Get the Air Quality Index, if it's time
-* Get data from the SCD-30 sensor, if it's time
+* Get data from the adafruit_bme280 sensor, if it's time
 * Work out the Local Time, based on the RTC
 * Show all of the data on the screen
 
@@ -161,6 +161,15 @@ See this page:  https://learn.adafruit.com/upgrading-esp32-firmware/upgrade-all-
 
 It's also important to use the lastest version of CircuitPython and the latest version of the CircuitPython 
 libraries.  These can be downloaded from Adafruit and other sources.
+
+**Organization**
+
+The "code.py" file contains all of the logic, API calls, and other structure.  All of the other modelus, 
+(eg "date_time.py", "sun.py", etc) contain the code to set up and display the various fields of information.
+This means that the APIs, and business logic is separate from the display logic, which I always think is a 
+good thing.  Also, the various modules are pretty much independent of their location on the screen and can
+be moved around easily.
+
 
 ### OpenWeatherMap
 
